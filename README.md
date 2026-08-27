@@ -50,6 +50,20 @@ Connect the local MCP server to Codex:
 codex mcp add workspaceVscode --env "VSCODE_MCP_WORKSPACE=C:\path\to\test_finance analysis" -- node "C:\path\to\test_finance analysis\mcp-vscode\src\server.js"
 ```
 
+## MCP workspace server
+
+The local MCP server provides a narrow bridge between an MCP client and this VS Code workspace. It uses stdio transport and keeps all file access inside the configured workspace root.
+
+Available tools:
+
+- `workspace_info` reports the configured root and runtime details.
+- `list_workspace` lists files and directories, excluding `.git`, `.venv`, `node_modules`, and Python caches.
+- `read_workspace_file` reads UTF-8 text files up to 512 KB.
+- `search_workspace` searches workspace text with `rg` without modifying files.
+- `open_in_vscode` opens a workspace file at an optional line and column.
+
+The server does not expose arbitrary shell execution, write operations, credentials, or paths outside the configured workspace. Set `VSCODE_MCP_WORKSPACE` when the project location differs from the repository root, then restart the MCP client after changing its configuration.
+
 Install `copilot-topic-monitor/copilot-topic-monitor-0.1.0.vsix` through VS Code's **Extensions: Install from VSIX...** command.
 
 ## Dual-agent command prompt
