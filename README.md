@@ -33,6 +33,17 @@ python -m venv .venv
 npm --prefix mcp-vscode install
 ```
 
+## Local dashboard
+
+Generate the descriptive artifacts, then start the interactive visualization:
+
+```powershell
+.\.venv\Scripts\python.exe .\advanced_analysis.py
+.\.venv\Scripts\python.exe -m streamlit run .\dashboard.py
+```
+
+Open `http://localhost:8501`. The dashboard provides firm, year, industry, and AI-use filters, interactive risk charts, relationship views, and filtered CSV download. The generated report and study notes are written to `outputs/advanced_analysis/`.
+
 Connect the local MCP server to Codex:
 
 ```powershell
