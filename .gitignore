@@ -1,0 +1,12 @@
+.venv/
+node_modules/
+__pycache__/
+.ipynb_checkpoints/
+*.py[cod]
+outputs/
+data/raw/
+data/processed/
+*.pbix
+.kaggle/
+.env
+.agent-bridge/transcripts/

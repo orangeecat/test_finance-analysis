@@ -1,0 +1,16 @@
+{
+  "name": "workspace-vscode-mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A workspace-scoped MCP server for inspecting and opening files in VS Code.",
+  "scripts": {
+    "start": "node src/server.js",
+    "check": "node --check src/server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.25.76"
+  }
+}
+

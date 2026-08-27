@@ -1,0 +1,4 @@
+[mcp_servers.workspaceVscode]
+command = "node"
+args = ["C:/path/to/test_finance analysis/mcp-vscode/src/server.js"]
+env = { VSCODE_MCP_WORKSPACE = "C:/path/to/test_finance analysis" }

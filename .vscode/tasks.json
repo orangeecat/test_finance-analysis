@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Big4: install dependencies",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "pip", "install", "-r", "requirements-big4.txt"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Big4: download Kaggle dataset",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["download_big4_data.py"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Big4: profile dataset",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["analyze_big4.py"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Big4: advanced descriptive analysis",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["advanced_analysis.py"],
+      "problemMatcher": []
+    },
+    {
+      "label": "Big4: start interactive dashboard",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "streamlit", "run", "dashboard.py"],
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Big4: start JupyterLab",
+      "type": "shell",
+      "command": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "jupyterlab"],
+      "isBackground": true,
+      "problemMatcher": []
+    }
+  ]
+}

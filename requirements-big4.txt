@@ -1,0 +1,4 @@
+-r requirements.txt
+kagglehub>=1,<2
+pyarrow>=18,<26
+scikit-learn>=1.6,<2
